@@ -6,9 +6,10 @@ import (
 	"errors"
 	"fmt"
 	"strconv"
+	"vlogcc-lsp/lsp"
 )
 
-func EncodeMessage(msg interface{}) string {
+func EncodeMessage(msg any) string {
 	content, err := json.Marshal(msg)
 	if err != nil {
 		panic(err)
@@ -56,4 +57,9 @@ func Split(data []byte, _ bool) (advance int, token []byte, err error) {
 	}
 	totalLen := len(header) + 4 + contentlen
 	return totalLen, data[:totalLen], nil
+}
+
+func GetSymbolAtPosition(uri string, position lsp.Position) (string, error){
+	fmt.Printf("%s\n %d\n", uri, position)
+	return "", nil
 }
