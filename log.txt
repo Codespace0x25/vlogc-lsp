@@ -1,0 +1,13 @@
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:15: Started Logging
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:29: Recieved Message with: initialize
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:36: Connected to Neovim 0.12.0-dev+gafebbd0f34
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:41: Reply Sent
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:29: Recieved Message with: initialized
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:29: Recieved Message with: textDocument/didOpen
+[vlogcc-lsp]2025/07/28 01:13:06 main.go:47: Opened file:///home/xsoder/programming/vlogcc-lsp/test.code require "lib/lib.code"
+
+defun main(void) int {
+		printf("Hello world")
+}
+[vlogcc-lsp]2025/07/28 01:13:07 main.go:29: Recieved Message with: textDocument/didSave
+[vlogcc-lsp]2025/07/28 01:13:56 main.go:29: Recieved Message with: shutdown
