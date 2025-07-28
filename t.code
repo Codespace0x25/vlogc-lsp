@@ -1,0 +1,5 @@
+require "/home/xsoder/programming/jsonlang/lib/lib.code"
+
+defunc main(void) int{
+
+}

@@ -50,6 +50,9 @@ func handleMessage(logger *log.Logger, writer io.Writer, state analysis.State, m
 
 		logger.Printf("Opened %s", request.Params.TextDocument.URI)
 		state.OpenDocument(request.Params.TextDocument.URI, request.Params.TextDocument.Text)
+		if err := state.LoadImports(request.Params.TextDocument.URI); err != nil {
+			fmt.Fprintf(os.Stderr, "Error loading imports for %s: %v\n", request.Params.TextDocument.URI, err)
+		}
 	case "textDocument/didChange":
 		var request lsp.TextDocumentDidChangeNotification
 		if err := json.Unmarshal(contents, &request); err != nil {
