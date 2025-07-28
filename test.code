@@ -2,4 +2,5 @@ require "lib/lib.code"
 
 defun main(void) int {
 		printf("Hello world")
+		printf(Master")
 }
